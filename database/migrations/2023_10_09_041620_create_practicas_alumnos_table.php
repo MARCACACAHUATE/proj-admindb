@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('practicas_alumnos', function (Blueprint $table) {
             $table->id();
-            $table->datetimes("fecha_entrega");
+            $table->dateTime("fecha_entrega");
             $table->string("archivo", 250);
         });
     }

@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('registro_semestres', function (Blueprint $table) {
             $table->id();
             $table->boolean("is_valid")->default(true);
-            $table->datetimes("fecha_inicio");
-            $table->datetimes("fecha_fin");
+            $table->dateTime("fecha_inicio");
+            $table->dateTime("fecha_fin");
         });
     }
 

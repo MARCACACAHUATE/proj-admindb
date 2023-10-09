@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string("titulo", 100);
             $table->text("descripcion");
-            $table->datetimes("fecha_inicio");
-            $table->datetimes("fecha_fin");
+            $table->dateTime("fecha_inicio");
+            $table->dateTime("fecha_fin");
             $table->boolean("is_valid")->default(true);
             $table->string("archivo", 250);
         });
