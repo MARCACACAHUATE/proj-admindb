@@ -5,7 +5,11 @@ namespace App\Http\Controllers;
 use App\Models\Rol;
 use App\Models\Usuarios;
 use Illuminate\Http\Request;
-
+/*
+|--------------------------------------------------------------------------
+| FALTA AGREGAR LAS VIEWS CON LOS DE FRONT
+|--------------------------------------------------------------------------
+*/
 class UsuariosController extends Controller
 {
     /**
