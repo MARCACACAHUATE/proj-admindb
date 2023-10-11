@@ -16,3 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('/usuarios', UsuariosController::class);
+/*
+|--------------------------------------------------------------------------
+| Tambien se puede agregar como individuales
+|
+| Route::get('usuarios', [UsuariosController::class, 'index']);
+|--------------------------------------------------------------------------
+*/
