@@ -14,7 +14,8 @@ return new class extends Migration
         Schema::create('grupos', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger("numero_brigada");
-            $table->unsignedBigInteger("maestro_brigada");
+            $table->string("maestro_brigada");
+            $table->timestamps();
         });
     }
 
