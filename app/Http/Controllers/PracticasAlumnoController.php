@@ -6,14 +6,65 @@ use App\Http\Requests\StorePracticasAlumnoRequest;
 use App\Http\Requests\UpdatePracticasAlumnoRequest;
 use App\Models\PracticasAlumno;
 
+/**
+* @OA\Info(
+*   title="Practicas Alumno's Controller", 
+*   version="1.0",
+*   description="Controller para interactuar con las practicas realizadas por los alumnos."
+* )
+*
+* @OA\Server(url="127.0.0.1:8000")
+*/
 class PracticasAlumnoController extends Controller
 {
-    /**
-     * Display a listing of the resource.
+     /**
+     * Trae la lista de practicas realizadas por el alumno
+     * @OA\Get (
+     *     path="/api/practica-alumno",
+     *     tags={"Practicas Alumnos"},
+     *     @OA\Response(
+     *         response=200,
+     *         description="OK",
+     *         @OA\JsonContent(
+     *             @OA\Property(
+     *                 type="array",
+     *                 property="rows",
+     *                 @OA\Items(
+     *                     type="object",
+     *                     @OA\Property(
+     *                         property="id",
+     *                         type="number",
+     *                         example="1"
+     *                     ),
+     *                     @OA\Property(
+     *                         property="nombres",
+     *                         type="string",
+     *                         example="Aderson Felix"
+     *                     ),
+     *                     @OA\Property(
+     *                         property="apellidos",
+     *                         type="string",
+     *                         example="Jara Lazaro"
+     *                     ),
+     *                     @OA\Property(
+     *                         property="created_at",
+     *                         type="string",
+     *                         example="2023-02-23T00:09:16.000000Z"
+     *                     ),
+     *                     @OA\Property(
+     *                         property="updated_at",
+     *                         type="string",
+     *                         example="2023-02-23T12:33:45.000000Z"
+     *                     )
+     *                 )
+     *             )
+     *         )
+     *     )
+     * )
      */
-    public function index()
+    public function index(): string
     {
-        //
+        return "hola";
     }
 
     /**

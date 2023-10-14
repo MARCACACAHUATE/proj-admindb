@@ -1,0 +1,66 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Practicas Alumno's Controller",
+        "description": "Controller para interactuar con las practicas realizadas por los alumnos.",
+        "version": "1.0"
+    },
+    "servers": [
+        {
+            "url": "127.0.0.1:8000"
+        }
+    ],
+    "paths": {
+        "/api/practica-alumno": {
+            "get": {
+                "tags": [
+                    "Practicas Alumnos"
+                ],
+                "summary": "Trae la lista de practicas realizadas por el alumno",
+                "operationId": "8a98e968169ca92a4c4a7082a7bc52e0",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "rows": {
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "id": {
+                                                        "type": "number",
+                                                        "example": "1"
+                                                    },
+                                                    "nombres": {
+                                                        "type": "string",
+                                                        "example": "Aderson Felix"
+                                                    },
+                                                    "apellidos": {
+                                                        "type": "string",
+                                                        "example": "Jara Lazaro"
+                                                    },
+                                                    "created_at": {
+                                                        "type": "string",
+                                                        "example": "2023-02-23T00:09:16.000000Z"
+                                                    },
+                                                    "updated_at": {
+                                                        "type": "string",
+                                                        "example": "2023-02-23T12:33:45.000000Z"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
